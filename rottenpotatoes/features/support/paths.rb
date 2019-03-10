@@ -26,7 +26,14 @@ module NavigationHelpers
       movie_path(Movie.find_by_title($1).id)
 
     #when /^the (RottenPotatoes )?home\s?page$/ then '/movies'
-
+    when /^the RottenPotatoes homepage$/ 
+      '/movies'
+      
+    when /^the (RottenPotatoes)?home\s?page$/ 
+      '/movies'
+      
+    when /^the movies page$/
+      '/movies'
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
